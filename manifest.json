@@ -1,0 +1,23 @@
+{
+    "name": "Future",
+    "decription": "We are changing color of website pages",
+    "version": "1.0.0",
+    
+    "manifest_version": 2,
+
+    "background": {
+        "script": [
+            "eureka.js"
+        ]
+    },
+    "persistent": true,
+    "browser_action": {
+        "default_title": "Appearance",
+        "default_popup": "eureka.html"
+    },
+    "permissions": [
+        "htpps://*/*",
+        "htpp://*/*",
+        "tabs"
+    ]
+}

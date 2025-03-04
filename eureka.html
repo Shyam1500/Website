@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .popup {
+            min-width: 344px;
+            min-height: 188px;
+            background-color: #FFFFFF;
+            box-shadow: 0PX 4PX 4PX rgb(0, 0, 0.25);
+            border-radius: 10px;
+            padding: 1rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .yellow {
+            color: brown;
+        }
+
+        p {
+            font-size: 0.75rem;
+        }
+
+        .button {
+            background-color: yellow;
+            position: relative;
+            height: 32px;
+            width: 60px;
+            border-radius: 25px;
+            transition: 1s;
+            cursor: pointer;
+        }
+ 
+        .half {
+            height: 2rem;
+            width: 3.78rem;
+            position: absolute;
+            width: 0%;
+            top: 20%;
+            transform: translate(-50%);
+            pointer-events: none;
+            font-size: 14px;
+
+        }
+
+        .circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            background-color: aqua;
+            pointer-events: none;
+            transition: 1s;
+        } 
+
+        @keyframes transformToBlue {
+            0% {
+                background-color: #FDFCA3;
+            }
+
+            100% {
+                background-color: #8ABFF0;
+            }
+        }
+
+        @keyframes moveCircleRight {
+            0% {
+                left: 0;
+                transform: translateX(0);
+                background-color: rgb(255, 213, 0);
+
+            }
+
+            100% {
+                left: 100%;
+                transform: translate(0);
+                background-color: #588BE4;
+            }
+        }
+
+        @keyframes moveCircleLeft {
+            0% {
+
+                left: 100%;
+                transform: translate(0);
+                background-color: #588BE4;
+
+            }
+
+            100% {
+                left: 0;
+                transform: translateX(0);
+                background-color: rgb(255, 213, 0);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="popup">
+        <h1><span class="yellow">Appearance</span></h1>
+        <p>Board of looking website like the same way? Wanted to change the "Apppearance", a chrome eXtention that can
+            change website color from light mode to dark mode and vice versa</p>
+        <div class="button">
+            <div class="circle">
+                <div class="half" style="left: 5px; text-align: left;">On</div>
+                <div class="half" style="right: .8%; text-align: right;">Off</div>
+            </div>
+        </div>
+    </div>
+    <script src=".eureka.js"></script>
+</body>
+
+</html>
